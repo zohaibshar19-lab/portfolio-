@@ -567,60 +567,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
 
-    /* =====================================================
-       PREVENT BROKEN IMAGE LOOK
-    ===================================================== */
+const profileImage = document.querySelector(".profile-image");
 
-    const profileImage =
-        document.querySelector(".profile-image");
+if (profileImage) {
 
+    profileImage.addEventListener("error", () => {
 
-    if (profileImage) {
-
-        profileImage.addEventListener(
-            "error",
-            () => {
-
-                profileImage.style.display = "none";
-
-                const wrapper =
-                    profileImage.parentElement;
-
-                if (wrapper) {
-
-                    wrapper.style.display = "grid";
-                    wrapper.style.placeItems = "center";
-
-                    wrapper.innerHTML = `
-                        <div style="
-                            text-align:center;
-                            color:var(--text-muted);
-                            font-family:'Space Grotesk',sans-serif;
-                        ">
-                            <div style="
-                                font-size:48px;
-                                font-weight:700;
-                                margin-bottom:8px;
-                            ">
-                                ZN
-                            </div>
-                            <div style="
-                                font-size:11px;
-                                letter-spacing:.12em;
-                                text-transform:uppercase;
-                            ">
-                                Profile Image
-                            </div>
-                        </div>
-                    `;
-
-                }
-
-            }
+        console.error(
+            "Profile image could not be loaded:",
+            profileImage.src
         );
 
-    }
+    });
+
+    profileImage.addEventListener("load", () => {
+
+        console.log(
+            "Profile image loaded successfully."
+        );
+
+    });
+
+}
 
 
     /* =====================================================
