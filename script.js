@@ -48,14 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!navbar) return;
 
         if (window.scrollY > 50) {
+
             navbar.classList.add("scrolled");
+
         } else {
+
             navbar.classList.remove("scrolled");
+
         }
 
     }
 
-    window.addEventListener("scroll", handleNavbarScroll);
+    window.addEventListener(
+        "scroll",
+        handleNavbarScroll
+    );
 
     handleNavbarScroll();
 
@@ -72,14 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!icon) return;
 
-        if (document.body.classList.contains("light-theme")) {
+        if (
+            document.body.classList.contains("light-theme")
+        ) {
 
             icon.classList.remove("fa-moon");
+
             icon.classList.add("fa-sun");
 
         } else {
 
             icon.classList.remove("fa-sun");
+
             icon.classList.add("fa-moon");
 
         }
@@ -89,10 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Load saved theme */
 
-    const savedTheme = localStorage.getItem("portfolio-theme");
+    const savedTheme =
+        localStorage.getItem("portfolio-theme");
 
     if (savedTheme === "light") {
-        document.body.classList.add("light-theme");
+
+        document.body.classList.add(
+            "light-theme"
+        );
+
     }
 
     updateThemeIcon();
@@ -102,21 +118,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (themeToggle) {
 
-        themeToggle.addEventListener("click", () => {
+        themeToggle.addEventListener(
+            "click",
+            () => {
 
-            document.body.classList.toggle("light-theme");
+                document.body.classList.toggle(
+                    "light-theme"
+                );
 
-            const isLight =
-                document.body.classList.contains("light-theme");
+                const isLight =
+                    document.body.classList.contains(
+                        "light-theme"
+                    );
 
-            localStorage.setItem(
-                "portfolio-theme",
-                isLight ? "light" : "dark"
-            );
+                localStorage.setItem(
+                    "portfolio-theme",
+                    isLight ? "light" : "dark"
+                );
 
-            updateThemeIcon();
+                updateThemeIcon();
 
-        });
+            }
+        );
 
     }
 
@@ -136,12 +159,18 @@ document.addEventListener("DOMContentLoaded", () => {
             "Close menu"
         );
 
-        const icon = menuToggle.querySelector("i");
+        const icon =
+            menuToggle.querySelector("i");
 
         if (icon) {
 
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
+            icon.classList.remove(
+                "fa-bars"
+            );
+
+            icon.classList.add(
+                "fa-xmark"
+            );
 
         }
 
@@ -159,12 +188,18 @@ document.addEventListener("DOMContentLoaded", () => {
             "Open menu"
         );
 
-        const icon = menuToggle.querySelector("i");
+        const icon =
+            menuToggle.querySelector("i");
 
         if (icon) {
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
 
         }
 
@@ -173,18 +208,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle) {
 
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener(
+            "click",
+            () => {
 
-            const isOpen =
-                mobileMenu.classList.contains("open");
+                const isOpen =
+                    mobileMenu.classList.contains(
+                        "open"
+                    );
 
-            if (isOpen) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
+                if (isOpen) {
+
+                    closeMobileMenu();
+
+                } else {
+
+                    openMobileMenu();
+
+                }
+
             }
-
-        });
+        );
 
     }
 
@@ -193,49 +237,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mobileLinks.forEach(link => {
 
-        link.addEventListener("click", () => {
+        link.addEventListener(
+            "click",
+            () => {
 
-            closeMobileMenu();
+                closeMobileMenu();
 
-        });
+            }
+        );
 
     });
 
 
     /* Close menu when clicking outside */
 
-    document.addEventListener("click", (event) => {
+    document.addEventListener(
+        "click",
+        (event) => {
 
-        if (!mobileMenu || !menuToggle) return;
+            if (!mobileMenu || !menuToggle) {
+                return;
+            }
 
-        const clickedInsideMenu =
-            mobileMenu.contains(event.target);
+            const clickedInsideMenu =
+                mobileMenu.contains(event.target);
 
-        const clickedMenuButton =
-            menuToggle.contains(event.target);
+            const clickedMenuButton =
+                menuToggle.contains(event.target);
 
-        if (
-            mobileMenu.classList.contains("open") &&
-            !clickedInsideMenu &&
-            !clickedMenuButton
-        ) {
+            if (
+                mobileMenu.classList.contains("open") &&
+                !clickedInsideMenu &&
+                !clickedMenuButton
+            ) {
 
-            closeMobileMenu();
+                closeMobileMenu();
+
+            }
 
         }
-
-    });
+    );
 
 
     /* Close mobile menu when resizing to desktop */
 
-    window.addEventListener("resize", () => {
+    window.addEventListener(
+        "resize",
+        () => {
 
-        if (window.innerWidth > 760) {
-            closeMobileMenu();
+            if (window.innerWidth > 760) {
+
+                closeMobileMenu();
+
+            }
+
         }
-
-    });
+    );
 
 
     /* =====================================================
@@ -252,16 +309,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sections.forEach(section => {
 
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute("id");
+            const sectionTop =
+                section.offsetTop;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            const sectionId =
+                section.getAttribute("id");
 
             if (
                 scrollPosition >= sectionTop &&
-                scrollPosition < sectionTop + sectionHeight
+                scrollPosition <
+                    sectionTop + sectionHeight
             ) {
 
-                currentSection = sectionId;
+                currentSection =
+                    sectionId;
 
             }
 
@@ -275,13 +339,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const href =
                 link.getAttribute("href");
 
-            if (href === `#${currentSection}`) {
+            if (
+                href ===
+                `#${currentSection}`
+            ) {
+
                 link.classList.add("active");
+
             }
 
         });
 
     }
+
 
     window.addEventListener(
         "scroll",
@@ -296,44 +366,59 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const allAnchorLinks =
-        document.querySelectorAll('a[href^="#"]');
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
 
     allAnchorLinks.forEach(link => {
 
-        link.addEventListener("click", event => {
+        link.addEventListener(
+            "click",
+            event => {
 
-            const targetId =
-                link.getAttribute("href");
+                const targetId =
+                    link.getAttribute("href");
 
-            if (
-                !targetId ||
-                targetId === "#" ||
-                targetId.length < 2
-            ) {
-                return;
+                if (
+                    !targetId ||
+                    targetId === "#" ||
+                    targetId.length < 2
+                ) {
+
+                    return;
+
+                }
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+                if (!target) return;
+
+                event.preventDefault();
+
+                const navbarHeight =
+                    navbar
+                        ? navbar.offsetHeight
+                        : 0;
+
+                const targetPosition =
+                    target.getBoundingClientRect()
+                        .top +
+                    window.scrollY -
+                    navbarHeight;
+
+                window.scrollTo({
+
+                    top: targetPosition,
+
+                    behavior: "smooth"
+
+                });
+
             }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            const navbarHeight =
-                navbar ? navbar.offsetHeight : 0;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-
-        });
+        );
 
     });
 
@@ -342,22 +427,28 @@ document.addEventListener("DOMContentLoaded", () => {
        SCROLL REVEAL ANIMATION
     ===================================================== */
 
-    const revealElements = document.querySelectorAll(
-        ".section-heading, " +
-        ".about-content, " +
-        ".stat-card, " +
-        ".education-card, " +
-        ".skill-card, " +
-        ".project-featured, " +
-        ".service-card, " +
-        ".contact-wrapper"
-    );
+    const revealElements =
+        document.querySelectorAll(
+
+            ".section-heading, " +
+            ".about-content, " +
+            ".stat-card, " +
+            ".education-card, " +
+            ".skill-card, " +
+            ".project-featured, " +
+            ".service-card, " +
+            ".contact-wrapper"
+
+        );
 
 
     revealElements.forEach(element => {
 
         element.style.opacity = "0";
-        element.style.transform = "translateY(30px)";
+
+        element.style.transform =
+            "translateY(30px)";
+
         element.style.transition =
             "opacity 0.7s ease, transform 0.7s ease";
 
@@ -366,25 +457,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const revealObserver =
         new IntersectionObserver(
+
             (entries, observer) => {
 
                 entries.forEach(entry => {
 
-                    if (!entry.isIntersecting) return;
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
                     entry.target.style.opacity = "1";
+
                     entry.target.style.transform =
                         "translateY(0)";
 
-                    observer.unobserve(entry.target);
+                    observer.unobserve(
+                        entry.target
+                    );
 
                 });
 
             },
+
             {
                 threshold: 0.12,
-                rootMargin: "0px 0px -50px 0px"
+
+                rootMargin:
+                    "0px 0px -50px 0px"
             }
+
         );
 
 
@@ -400,14 +501,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const skillCards =
-        document.querySelectorAll(".skill-card");
+        document.querySelectorAll(
+            ".skill-card"
+        );
 
-    skillCards.forEach((card, index) => {
+    skillCards.forEach(
+        (card, index) => {
 
-        card.style.transitionDelay =
-            `${index * 70}ms`;
+            card.style.transitionDelay =
+                `${index * 70}ms`;
 
-    });
+        }
+    );
 
 
     /* =====================================================
@@ -415,14 +520,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const serviceCards =
-        document.querySelectorAll(".service-card");
+        document.querySelectorAll(
+            ".service-card"
+        );
 
-    serviceCards.forEach((card, index) => {
+    serviceCards.forEach(
+        (card, index) => {
 
-        card.style.transitionDelay =
-            `${index * 100}ms`;
+            card.style.transitionDelay =
+                `${index * 100}ms`;
 
-    });
+        }
+    );
 
 
     /* =====================================================
@@ -430,45 +539,76 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const heroElements = [
-        document.querySelector(".availability"),
-        document.querySelector(".hero-intro"),
-        document.querySelector(".hero-title"),
-        document.querySelector(".hero-role"),
-        document.querySelector(".hero-description"),
-        document.querySelector(".hero-buttons"),
-        document.querySelector(".hero-socials"),
-        document.querySelector(".hero-visual")
+
+        document.querySelector(
+            ".availability"
+        ),
+
+        document.querySelector(
+            ".hero-intro"
+        ),
+
+        document.querySelector(
+            ".hero-title"
+        ),
+
+        document.querySelector(
+            ".hero-role"
+        ),
+
+        document.querySelector(
+            ".hero-description"
+        ),
+
+        document.querySelector(
+            ".hero-buttons"
+        ),
+
+        document.querySelector(
+            ".hero-socials"
+        ),
+
+        document.querySelector(
+            ".hero-visual"
+        )
+
     ];
 
 
-    heroElements.forEach((element, index) => {
+    heroElements.forEach(
+        (element, index) => {
 
-        if (!element) return;
+            if (!element) return;
 
-        element.style.opacity = "0";
-        element.style.transform =
-            "translateY(25px)";
+            element.style.opacity = "0";
 
-        element.style.transition =
-            "opacity 0.8s ease, transform 0.8s ease";
+            element.style.transform =
+                "translateY(25px)";
 
-        element.style.transitionDelay =
-            `${0.15 + index * 0.1}s`;
+            element.style.transition =
+                "opacity 0.8s ease, transform 0.8s ease";
 
-    });
+            element.style.transitionDelay =
+                `${0.15 + index * 0.1}s`;
+
+        }
+    );
 
 
     setTimeout(() => {
 
-        heroElements.forEach(element => {
+        heroElements.forEach(
+            element => {
 
-            if (!element) return;
+                if (!element) return;
 
-            element.style.opacity = "1";
-            element.style.transform =
-                "translateY(0)";
+                element.style.opacity = "1";
 
-        });
+                element.style.transform =
+                    "translateY(0)";
+
+            }
+        );
 
     }, 150);
 
@@ -478,68 +618,106 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const profileCard =
-        document.querySelector(".profile-card");
+        document.querySelector(
+            ".profile-card"
+        );
 
 
     if (
         profileCard &&
-        window.matchMedia("(min-width: 1001px)").matches
+        window.matchMedia(
+            "(min-width: 1001px)"
+        ).matches
     ) {
 
-        document.addEventListener("mousemove", event => {
+        document.addEventListener(
+            "mousemove",
+            event => {
 
-            const x =
-                (event.clientX / window.innerWidth - 0.5);
+                const x =
+                    (
+                        event.clientX /
+                        window.innerWidth -
+                        0.5
+                    );
 
-            const y =
-                (event.clientY / window.innerHeight - 0.5);
+                const y =
+                    (
+                        event.clientY /
+                        window.innerHeight -
+                        0.5
+                    );
 
-            const rotateX =
-                y * -4;
+                const rotateX =
+                    y * -4;
 
-            const rotateY =
-                x * 5;
+                const rotateY =
+                    x * 5;
 
-            profileCard.style.transform =
-                `rotate(3deg) perspective(900px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)`;
+                profileCard.style.transform =
+                    `rotate(3deg) perspective(900px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)`;
 
-        });
+            }
+        );
 
     }
 
 
     /* =====================================================
        PROJECT LINK HOVER
+       Supports multiple project links
     ===================================================== */
 
-    const projectLink =
-        document.querySelector(".project-link");
-
-
-    if (projectLink) {
-
-        projectLink.addEventListener(
-            "mouseenter",
-            () => {
-
-                projectLink.style.gap = "15px";
-
-            }
+    const projectLinks =
+        document.querySelectorAll(
+            ".project-link"
         );
 
 
-        projectLink.addEventListener(
-            "mouseleave",
-            () => {
+    projectLinks.forEach(
+        projectLink => {
 
-                projectLink.style.gap = "10px";
+            projectLink.addEventListener(
+                "mouseenter",
+                () => {
 
-            }
-        );
+                    if (
+                        projectLink.classList.contains(
+                            "project-link-static"
+                        )
+                    ) {
+                        return;
+                    }
 
-    }
+                    projectLink.style.gap =
+                        "15px";
+
+                }
+            );
+
+
+            projectLink.addEventListener(
+                "mouseleave",
+                () => {
+
+                    if (
+                        projectLink.classList.contains(
+                            "project-link-static"
+                        )
+                    ) {
+                        return;
+                    }
+
+                    projectLink.style.gap =
+                        "10px";
+
+                }
+            );
+
+        }
+    );
 
 
     /* =====================================================
@@ -559,40 +737,55 @@ document.addEventListener("DOMContentLoaded", () => {
        Close mobile menu
     ===================================================== */
 
-    document.addEventListener("keydown", event => {
+    document.addEventListener(
+        "keydown",
+        event => {
 
-        if (event.key === "Escape") {
-            closeMobileMenu();
+            if (event.key === "Escape") {
+
+                closeMobileMenu();
+
+            }
+
         }
+    );
 
-    });
 
-/* =====================================================
-   PROFILE IMAGE
-===================================================== */
+    /* =====================================================
+       PROFILE IMAGE
+    ===================================================== */
 
-const profileImage = document.querySelector(".profile-image");
-
-if (profileImage) {
-
-    profileImage.addEventListener("error", () => {
-
-        console.error(
-            "Profile image could not be loaded:",
-            profileImage.src
+    const profileImage =
+        document.querySelector(
+            ".profile-image"
         );
 
-    });
+    if (profileImage) {
 
-    profileImage.addEventListener("load", () => {
+        profileImage.addEventListener(
+            "error",
+            () => {
 
-        console.log(
-            "Profile image loaded successfully."
+                console.error(
+                    "Profile image could not be loaded:",
+                    profileImage.src
+                );
+
+            }
         );
 
-    });
+        profileImage.addEventListener(
+            "load",
+            () => {
 
-}
+                console.log(
+                    "Profile image loaded successfully."
+                );
+
+            }
+        );
+
+    }
 
 
     /* =====================================================
@@ -605,7 +798,7 @@ if (profileImage) {
     );
 
     console.log(
-        "%cVideo Editor & Web Developer",
+        "%cAI Developer & Web Developer & Video Editor",
         "font-size:12px;"
     );
 
