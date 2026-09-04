@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Zohaib Nazir — AI Developer, Web Developer and Video Editor from Khairpur Mir's, Sindh, Pakistan."
-    >
-
-    <meta
-        name="author"
-        content="Zohaib Nazir"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Zohaib Nazir | AI Developer & Web Developer</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
+    <meta
+        name="description"
+        content="Zohaib Nazir is an AI Developer, Web Developer and Video Editor creating modern websites, applications and AI-powered solutions."
     >
 
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Faster external connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
@@ -39,131 +27,115 @@
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        media="print"
+        onload="this.media='all'"
     >
 
-    <!-- Main CSS -->
+    <noscript>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        >
+    </noscript>
+
+    <!-- Favicon -->
     <link
-        rel="stylesheet"
-        href="style.css"
+        rel="icon"
+        href="profile.jpeg"
+        type="image/jpeg"
     >
-</head>
 
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
-    <!-- ======================================
+    <!-- =====================================================
          PAGE LOADER
-    ======================================= -->
+    ====================================================== -->
 
     <div class="page-loader" id="pageLoader">
-
         <div class="loader-content">
-
-            <div class="loader-logo">
-                ZN
-            </div>
-
+            <div class="loader-logo">ZN.</div>
             <div class="loader-line"></div>
-
         </div>
-
     </div>
 
 
-    <!-- ======================================
-         NAVIGATION
-    ======================================= -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header class="navbar" id="navbar">
 
         <div class="container nav-container">
 
-            <!-- Logo -->
-
-            <a
-                href="#home"
-                class="logo"
-            >
-                <span class="logo-mark">
-                    Z
-                </span>
+            <a href="#home" class="logo" aria-label="Zohaib Nazir Home">
+                <span class="logo-mark">ZN</span>
 
                 <span class="logo-text">
-                    Zohaib<span>.</span>
+                    Zohaib <span>Nazir</span>
                 </span>
             </a>
 
 
-            <!-- Desktop Navigation -->
+            <nav class="nav-links" aria-label="Main navigation">
 
-            <nav class="nav-links">
-
-                <a
-                    href="#home"
-                    class="nav-link active"
-                >
+                <a href="#home" class="nav-link active">
                     Home
                 </a>
 
-                <a
-                    href="#about"
-                    class="nav-link"
-                >
+                <a href="#about" class="nav-link">
                     About
                 </a>
 
-                <a
-                    href="#skills"
-                    class="nav-link"
-                >
+                <a href="#education" class="nav-link">
+                    Education
+                </a>
+
+                <a href="#skills" class="nav-link">
                     Skills
                 </a>
 
-                <a
-                    href="#projects"
-                    class="nav-link"
-                >
+                <a href="#projects" class="nav-link">
                     Projects
                 </a>
 
-                <a
-                    href="#contact"
-                    class="nav-link"
-                >
-                    Contact
+                <a href="#services" class="nav-link">
+                    Services
                 </a>
 
             </nav>
 
-
-            <!-- Navigation Actions -->
 
             <div class="nav-actions">
 
                 <button
                     class="theme-toggle"
                     id="themeToggle"
+                    type="button"
                     aria-label="Toggle theme"
                 >
-                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
                 </button>
 
-
-                <a
-                    href="#contact"
-                    class="nav-contact"
-                >
+                <a href="#contact" class="nav-contact">
                     Let's Talk
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                        aria-hidden="true"
+                    ></i>
                 </a>
-
 
                 <button
                     class="menu-toggle"
                     id="menuToggle"
+                    type="button"
                     aria-label="Open menu"
+                    aria-expanded="false"
                 >
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
 
             </div>
@@ -171,32 +143,17 @@
         </div>
 
 
-        <!-- Mobile Navigation -->
+        <!-- Mobile Menu -->
 
-        <div
-            class="mobile-menu"
-            id="mobileMenu"
-        >
+        <div class="mobile-menu" id="mobileMenu">
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
 
         </div>
 
@@ -206,40 +163,31 @@
 
     <main>
 
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-        <!-- ======================================
-             HERO SECTION
-        ======================================= -->
+        <section class="hero" id="home">
 
-        <section
-            class="hero"
-            id="home"
-        >
-
-            <div class="hero-background">
-
-                <div class="hero-orb orb-one"></div>
-
-                <div class="hero-orb orb-two"></div>
+            <div class="hero-background" aria-hidden="true">
 
                 <div class="hero-grid"></div>
+
+                <div class="hero-orb orb-one"></div>
+                <div class="hero-orb orb-two"></div>
 
             </div>
 
 
             <div class="container hero-container">
 
-
-                <!-- Hero Text -->
+                <!-- HERO CONTENT -->
 
                 <div class="hero-content">
 
                     <div class="availability">
-
                         <span class="availability-dot"></span>
-
                         Available for opportunities
-
                     </div>
 
 
@@ -247,86 +195,64 @@
                         Hello, I'm
                     </p>
 
-<h1 class="hero-title">
-    <span class="hero-name-main">Zohaib</span>
-    <span class="hero-name-last">Nazir</span>
-</h1>
+
+                    <h1 class="hero-title">
+
+                        <span class="hero-name-main">
+                            Zohaib
+                        </span>
+
+                        <span class="hero-name-last">
+                            Nazir
+                        </span>
+
+                    </h1>
 
 
-                    <h2 class="hero-role">
+                    <div class="hero-role">
 
                         <span>AI Developer</span>
 
-                        <span class="role-divider">
-                            &
-                        </span>
+                        <span class="role-divider">/</span>
 
                         <span>Web Developer</span>
 
-                        <span class="role-divider">
-                            &
-                        </span>
+                        <span class="role-divider">/</span>
 
                         <span>Video Editor</span>
 
-                    </h2>
+                    </div>
 
 
                     <p class="hero-description">
-
-                        I build AI-powered applications, modern websites,
-                        and engaging digital experiences by combining
-                        technology, creativity, and practical problem solving.
-
+                        I build modern websites, web applications and
+                        AI-powered solutions with clean design,
+                        useful functionality and a focus on real-world
+                        results.
                     </p>
 
 
                     <div class="hero-buttons">
 
-                        <a
-                            href="#projects"
-                            class="btn btn-primary"
-                        >
-
+                        <a href="#projects" class="btn btn-primary">
                             View My Work
-
-                            <i class="fa-solid fa-arrow-down"></i>
-
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
                         </a>
 
-
-                        <a
-                            href="#contact"
-                            class="btn btn-secondary"
-                        >
-
+                        <a href="#contact" class="btn btn-secondary">
                             Let's Connect
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
 
                     </div>
 
 
-                    <!-- Social Links -->
+                    <!-- HERO SOCIAL LINKS -->
 
-                    <div class="hero-socials">
-
-                        <span>
-                            Find me on
-                        </span>
-
-
-                        <a
-                            href="https://github.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-
+                    <div class="contact-socials">
 
                         <a
                             href="https://www.instagram.com/zohaib_nazir01/"
@@ -334,7 +260,25 @@
                             rel="noopener noreferrer"
                             aria-label="Instagram"
                         >
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+
+                        <a
+                            href="https://www.fiverr.com/sellers/sharzohaib/edit"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Fiverr"
+                        >
+                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                         </a>
 
                     </div>
@@ -342,13 +286,16 @@
                 </div>
 
 
-                <!-- Hero Image -->
+                <!-- =================================================
+                     HERO IMAGE
+                ================================================== -->
 
                 <div class="hero-visual">
 
                     <div class="image-decoration decoration-one"></div>
 
                     <div class="image-decoration decoration-two"></div>
+
 
                     <div class="profile-card">
 
@@ -358,64 +305,44 @@
                                 src="profile.jpeg"
                                 alt="Zohaib Nazir"
                                 class="profile-image"
+                                width="390"
+                                height="500"
+                                fetchpriority="high"
+                                decoding="async"
                             >
 
                         </div>
 
 
                         <div class="floating-badge badge-top">
-
-                            <i class="fa-solid fa-robot"></i>
-
-                            <span>
-                                AI Developer
-                            </span>
-
+                            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                            AI Developer
                         </div>
 
 
                         <div class="floating-badge badge-bottom">
-
-                            <i class="fa-solid fa-code"></i>
-
-                            <span>
-                                Web Developer
-                            </span>
-
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                            Web Developer
                         </div>
 
                     </div>
 
 
                     <div class="hero-number">
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
-                            / PORTFOLIO
-                        </span>
-
+                        <strong>01</strong>
+                        <span>PORTFOLIO</span>
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Scroll Indicator -->
 
-                <a
-                    href="#about"
-                    class="scroll-indicator"
-                >
+            <div class="scroll-indicator">
 
-                    <span>
-                        Scroll to explore
-                    </span>
+                <span>Scroll</span>
 
-                    <i class="fa-solid fa-arrow-down"></i>
-
-                </a>
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
 
             </div>
 
@@ -423,33 +350,29 @@
 
 
 
-        <!-- ======================================
-             ABOUT SECTION
-        ======================================= -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-        <section
-            class="section about-section"
-            id="about"
-        >
+        <section class="section about-section" id="about">
 
             <div class="container">
 
-
                 <div class="section-heading">
 
-                    <span class="section-number">
+                    <div class="section-number">
                         01
-                    </span>
+                    </div>
 
                     <div>
 
-                        <p class="section-label">
+                        <div class="section-label">
                             About Me
-                        </p>
+                        </div>
 
                         <h2>
-                            Turning ideas into
-                            <span>digital experiences.</span>
+                            Building digital experiences
+                            <span>that actually work.</span>
                         </h2>
 
                     </div>
@@ -459,77 +382,48 @@
 
                 <div class="about-grid">
 
-
-                    <!-- About Text -->
-
                     <div class="about-content">
 
                         <p class="about-lead">
-
-                            I'm Zohaib Nazir, a passionate
-                            <strong>AI Developer</strong>,
-                            <strong>Web Developer</strong> and
-                            <strong>Video Editor</strong> who enjoys
-                            building useful digital products and
-                            creating visual content that connects
-                            with people.
-
+                            I'm Zohaib Nazir, a developer focused on
+                            building modern websites, applications and
+                            AI-powered digital products.
                         </p>
-
 
                         <p>
-
-                            I combine AI, programming and creativity
-                            to build useful digital products. I develop
-                            AI-powered applications, responsive websites,
-                            and engaging digital experiences. Alongside
-                            development, I enjoy video editing and
-                            transforming ideas into compelling visual stories.
-
+                            I work across web development, AI
+                            integration and creative digital solutions.
+                            My goal is to turn ideas into functional,
+                            clean and easy-to-use products.
                         </p>
-
 
                         <p>
-
-                            I'm continuously learning, experimenting
-                            with new technologies, and looking for
-                            opportunities where I can turn ideas into
-                            meaningful projects.
-
+                            I enjoy working with modern technologies,
+                            creating practical solutions and continuously
+                            improving my development skills through
+                            real projects.
                         </p>
-
 
                         <div class="about-location">
-
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            <span>
-                                Khairpur Mir's, Sindh, Pakistan
-                            </span>
-
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Pakistan
                         </div>
 
                     </div>
 
 
-
-                    <!-- About Stats -->
-
                     <div class="about-stats">
 
                         <div class="stat-card">
 
-                            <span class="stat-number">
-                                01
-                            </span>
+                            <span class="stat-number">01</span>
 
-                            <h3>
-                                AI Development
-                            </h3>
+                            <h3>AI Development</h3>
 
                             <p>
-                                Building AI-powered applications,
-                                assistants and automation tools.
+                                Building AI-powered tools,
+                                assistants and intelligent
+                                application features.
                             </p>
 
                         </div>
@@ -537,17 +431,14 @@
 
                         <div class="stat-card">
 
-                            <span class="stat-number">
-                                02
-                            </span>
+                            <span class="stat-number">02</span>
 
-                            <h3>
-                                Web Development
-                            </h3>
+                            <h3>Web Development</h3>
 
                             <p>
-                                Responsive and modern websites
-                                built with clean design.
+                                Creating responsive websites
+                                and web applications with modern
+                                technologies.
                             </p>
 
                         </div>
@@ -555,17 +446,13 @@
 
                         <div class="stat-card">
 
-                            <span class="stat-number">
-                                03
-                            </span>
+                            <span class="stat-number">03</span>
 
-                            <h3>
-                                Video Editing
-                            </h3>
+                            <h3>Creative Work</h3>
 
                             <p>
-                                Engaging visual content designed
-                                to communicate ideas effectively.
+                                Video editing and creative digital
+                                content for online platforms.
                             </p>
 
                         </div>
@@ -580,29 +467,29 @@
 
 
 
-        <!-- ======================================
-             EDUCATION SECTION
-        ======================================= -->
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
 
-        <section class="section education-section">
+        <section class="section" id="education">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <span class="section-number">
+                    <div class="section-number">
                         02
-                    </span>
+                    </div>
 
                     <div>
 
-                        <p class="section-label">
+                        <div class="section-label">
                             Education
-                        </p>
+                        </div>
 
                         <h2>
-                            My learning
-                            <span>journey.</span>
+                            Learning today,
+                            <span>building tomorrow.</span>
                         </h2>
 
                     </div>
@@ -613,35 +500,31 @@
                 <div class="education-card">
 
                     <div class="education-icon">
-
-                        <i class="fa-solid fa-graduation-cap"></i>
-
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
                     </div>
 
 
                     <div class="education-info">
 
                         <span class="education-status">
-                            Academic Background
+                            Current Education
                         </span>
 
                         <h3>
-                            Intermediate
+                            Intermediate 
                         </h3>
 
                         <p>
-                            Building a strong academic foundation while
-                            developing practical skills in technology,
-                            creativity, and digital work.
+                            Continuing education while developing
+                            practical skills through real-world
+                            technology projects.
                         </p>
 
                     </div>
 
 
                     <div class="education-arrow">
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                        <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i>
                     </div>
 
                 </div>
@@ -652,28 +535,25 @@
 
 
 
-        <!-- ======================================
-             SKILLS SECTION
-        ======================================= -->
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
 
-        <section
-            class="section skills-section"
-            id="skills"
-        >
+        <section class="section skills-section" id="skills">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <span class="section-number">
+                    <div class="section-number">
                         03
-                    </span>
+                    </div>
 
                     <div>
 
-                        <p class="section-label">
+                        <div class="section-label">
                             Skills
-                        </p>
+                        </div>
 
                         <h2>
                             Tools I use to
@@ -687,109 +567,23 @@
 
                 <div class="skills-grid">
 
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Web Development
-                            </h3>
-
-                            <p>
-                                Building modern, responsive and
-                                user-friendly websites.
-                            </p>
-
-                        </div>
-
-                        <span class="skill-number">
-                            01
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-brands fa-html5"></i>
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                HTML & CSS
-                            </h3>
-
-                            <p>
-                                Creating structured layouts and
-                                polished responsive interfaces.
-                            </p>
-
-                        </div>
-
-                        <span class="skill-number">
-                            02
-                        </span>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-brands fa-js"></i>
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                JavaScript
-                            </h3>
-
-                            <p>
-                                Adding interaction and functionality
-                                to modern web experiences.
-                            </p>
-
-                        </div>
-
-                        <span class="skill-number">
-                            03
-                        </span>
-
-                    </div>
-
-
-                    <!-- AI DEVELOPMENT -->
-
                     <div class="skill-card ai-skill">
 
                         <div class="skill-icon">
-                            <i class="fa-solid fa-robot"></i>
+                            <i class="fa-solid fa-robot" aria-hidden="true"></i>
                         </div>
 
                         <div>
-
-                            <h3>
-                                AI Development
-                            </h3>
+                            <h3>AI Development</h3>
 
                             <p>
-                                Building AI-powered applications,
-                                automation tools and intelligent assistants.
+                                AI assistants, APIs,
+                                automation and intelligent
+                                application features.
                             </p>
-
                         </div>
 
-                        <span class="skill-number">
-                            04
-                        </span>
+                        <span class="skill-number">01</span>
 
                     </div>
 
@@ -797,25 +591,20 @@
                     <div class="skill-card">
 
                         <div class="skill-icon">
-                            <i class="fa-solid fa-film"></i>
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
                         </div>
 
                         <div>
-
-                            <h3>
-                                Video Editing
-                            </h3>
+                            <h3>Web Development</h3>
 
                             <p>
-                                Editing and shaping visual content
-                                with creativity and precision.
+                                HTML, CSS, JavaScript,
+                                responsive interfaces and
+                                modern web applications.
                             </p>
-
                         </div>
 
-                        <span class="skill-number">
-                            05
-                        </span>
+                        <span class="skill-number">02</span>
 
                     </div>
 
@@ -823,25 +612,20 @@
                     <div class="skill-card">
 
                         <div class="skill-icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <i class="fa-solid fa-database" aria-hidden="true"></i>
                         </div>
 
                         <div>
-
-                            <h3>
-                                Responsive Design
-                            </h3>
+                            <h3>Backend & Database</h3>
 
                             <p>
-                                Designing experiences that work
-                                beautifully across devices.
+                                Authentication, APIs,
+                                databases and Supabase
+                                integrations.
                             </p>
-
                         </div>
 
-                        <span class="skill-number">
-                            06
-                        </span>
+                        <span class="skill-number">03</span>
 
                     </div>
 
@@ -849,25 +633,62 @@
                     <div class="skill-card">
 
                         <div class="skill-icon">
-                            <i class="fa-solid fa-lightbulb"></i>
+                            <i class="fa-solid fa-video" aria-hidden="true"></i>
                         </div>
 
                         <div>
-
-                            <h3>
-                                Problem Solving
-                            </h3>
+                            <h3>Video Editing</h3>
 
                             <p>
-                                Turning challenges into practical
-                                and creative solutions.
+                                YouTube editing, short-form
+                                content, storytelling and
+                                visual production.
                             </p>
-
                         </div>
 
-                        <span class="skill-number">
-                            07
-                        </span>
+                        <span class="skill-number">04</span>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-wordpress" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h3>WordPress</h3>
+
+                            <p>
+                                WordPress websites,
+                                customization and content
+                                management.
+                            </p>
+                        </div>
+
+                        <span class="skill-number">05</span>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <h3>SEO</h3>
+
+                            <p>
+                                Search optimization,
+                                content structure and
+                                website visibility.
+                            </p>
+                        </div>
+
+                        <span class="skill-number">06</span>
 
                     </div>
 
@@ -879,32 +700,29 @@
 
 
 
-        <!-- ======================================
-             PROJECTS SECTION
-        ======================================= -->
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
 
-        <section
-            class="section projects-section"
-            id="projects"
-        >
+        <section class="section" id="projects">
 
             <div class="container">
 
-                <div class="section-heading projects-heading">
+                <div class="section-heading">
 
-                    <span class="section-number">
+                    <div class="section-number">
                         04
-                    </span>
+                    </div>
 
                     <div>
 
-                        <p class="section-label">
+                        <div class="section-label">
                             Selected Work
-                        </p>
+                        </div>
 
                         <h2>
-                            Projects I'm
-                            <span>proud of.</span>
+                            Projects built with
+                            <span>purpose.</span>
                         </h2>
 
                     </div>
@@ -912,12 +730,9 @@
                 </div>
 
 
-                <!-- ==================================
-                     PROJECT 01 — STUDENT BATTLE KHP
-                =================================== -->
+                <!-- STUDENT BATTLE KHP -->
 
-                <article class="project-featured">
-
+                <div class="project-featured">
 
                     <div class="project-visual">
 
@@ -926,17 +741,13 @@
                             <div class="browser-bar">
 
                                 <div class="browser-dots">
-
                                     <span></span>
                                     <span></span>
                                     <span></span>
-
                                 </div>
 
                                 <div class="browser-address">
-
-                                    student-battle-khp.github.io
-
+                                    student-battle-khp
                                 </div>
 
                             </div>
@@ -957,15 +768,14 @@
                                     </h4>
 
                                     <p>
-                                        Competition Platform
+                                        Online Quiz & Competition Platform
                                     </p>
 
+
                                     <div class="preview-lines">
-
                                         <span></span>
                                         <span></span>
                                         <span></span>
-
                                     </div>
 
                                 </div>
@@ -975,7 +785,6 @@
                         </div>
 
                     </div>
-
 
 
                     <div class="project-info">
@@ -999,32 +808,20 @@
 
 
                         <p>
-
-                            A live competition website and
-                            application designed to provide a
-                            digital platform for student competitions
-                            and participation.
-
+                            An online quiz and competition platform
+                            designed for students with authentication,
+                            question banks, live competitions,
+                            leaderboards and Supabase-powered backend
+                            functionality.
                         </p>
 
 
                         <div class="project-tags">
 
-                            <span>
-                                Web Development
-                            </span>
-
-                            <span>
-                                Responsive Design
-                            </span>
-
-                            <span>
-                                JavaScript
-                            </span>
-
-                            <span>
-                                Supabase
-                            </span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Supabase</span>
 
                         </div>
 
@@ -1035,24 +832,22 @@
                             rel="noopener noreferrer"
                             class="project-link"
                         >
-
-                            Visit Live Project
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                            View Project
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <!-- ==================================
-                     PROJECT 02 — ZAI
-                =================================== -->
 
-                <article class="project-featured zai-project">
+                <!-- ZAI -->
 
+                <div class="project-featured zai-project">
 
                     <div class="project-visual">
 
@@ -1061,17 +856,13 @@
                             <div class="browser-bar">
 
                                 <div class="browser-dots">
-
                                     <span></span>
                                     <span></span>
                                     <span></span>
-
                                 </div>
 
                                 <div class="browser-address">
-
-                                    ZAI — AI Personal Assistant
-
+                                    ZAI Local AI Assistant
                                 </div>
 
                             </div>
@@ -1088,19 +879,18 @@
                                     </div>
 
                                     <h4>
-                                        ZAI AI Assistant
+                                        ZAI
                                     </h4>
 
                                     <p>
-                                        Local Windows AI Assistant
+                                        Local AI Personal Assistant
                                     </p>
 
+
                                     <div class="preview-lines">
-
                                         <span></span>
                                         <span></span>
                                         <span></span>
-
                                     </div>
 
                                 </div>
@@ -1112,13 +902,12 @@
                     </div>
 
 
-
                     <div class="project-info">
 
                         <div class="project-top">
 
                             <span class="project-category">
-                                AI Desktop Application
+                                AI Application
                             </span>
 
                             <span class="project-index">
@@ -1129,52 +918,42 @@
 
 
                         <h3>
-                            ZAI — AI Personal Assistant
+                            ZAI
                         </h3>
 
 
                         <p>
-
-                            A local AI-powered Windows assistant
-                            built with Python and Ollama. ZAI is
-                            designed to understand natural-language
-                            commands and perform useful desktop tasks.
-
+                            A local Windows personal assistant designed
+                            to understand English, Urdu and Sindhi
+                            commands and perform useful desktop actions
+                            using a lightweight local AI architecture.
                         </p>
 
 
                         <div class="project-tags">
 
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                AI
-                            </span>
-
-                            <span>
-                                Ollama
-                            </span>
-
-                            <span>
-                                Automation
-                            </span>
+                            <span>Python</span>
+                            <span>Ollama</span>
+                            <span>AI</span>
+                            <span>Windows</span>
 
                         </div>
 
 
                         <span class="project-link project-link-static">
 
-                            AI Desktop Application
+                            In Development
 
-                            <i class="fa-solid fa-robot"></i>
+                            <i
+                                class="fa-solid fa-wrench"
+                                aria-hidden="true"
+                            ></i>
 
                         </span>
 
                     </div>
 
-                </article>
+                </div>
 
 
                 <div class="more-projects">
@@ -1185,7 +964,10 @@
 
                     <div class="more-line"></div>
 
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
 
                 </div>
 
@@ -1195,29 +977,29 @@
 
 
 
-        <!-- ======================================
-             SERVICES SECTION
-        ======================================= -->
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
 
-        <section class="section services-section">
+        <section class="section services-section" id="services">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <span class="section-number">
+                    <div class="section-number">
                         05
-                    </span>
+                    </div>
 
                     <div>
 
-                        <p class="section-label">
-                            What I Do
-                        </p>
+                        <div class="section-label">
+                            Services
+                        </div>
 
                         <h2>
-                            Turning skills into
-                            <span>solutions.</span>
+                            What I can
+                            <span>build for you.</span>
                         </h2>
 
                     </div>
@@ -1227,22 +1009,26 @@
 
                 <div class="services-grid">
 
-
                     <div class="service-card">
 
                         <span class="service-number">
                             01
                         </span>
 
-                        <i class="fa-solid fa-laptop-code"></i>
+                        <i
+                            class="fa-solid fa-robot"
+                            aria-hidden="true"
+                        ></i>
 
                         <h3>
-                            Website Development
+                            AI Solutions
                         </h3>
 
                         <p>
-                            Clean, responsive and modern websites
-                            designed around your goals and audience.
+                            Custom AI integrations,
+                            AI assistants, chatbots,
+                            automation and intelligent
+                            application features.
                         </p>
 
                     </div>
@@ -1254,16 +1040,19 @@
                             02
                         </span>
 
-                        <i class="fa-solid fa-robot"></i>
+                        <i
+                            class="fa-solid fa-laptop-code"
+                            aria-hidden="true"
+                        ></i>
 
                         <h3>
-                            AI Applications
+                            Website Development
                         </h3>
 
                         <p>
-                            AI-powered applications and automation
-                            tools designed to solve practical problems
-                            and improve digital workflows.
+                            Modern responsive websites
+                            and web applications designed
+                            around your business or idea.
                         </p>
 
                     </div>
@@ -1275,15 +1064,19 @@
                             03
                         </span>
 
-                        <i class="fa-solid fa-video"></i>
+                        <i
+                            class="fa-solid fa-video"
+                            aria-hidden="true"
+                        ></i>
 
                         <h3>
                             Video Editing
                         </h3>
 
                         <p>
-                            Engaging video content edited with
-                            attention to pacing, storytelling and detail.
+                            Professional YouTube videos,
+                            short-form content and engaging
+                            visual edits.
                         </p>
 
                     </div>
@@ -1296,77 +1089,65 @@
 
 
 
-        <!-- ======================================
-             CONTACT SECTION
-        ======================================= -->
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
 
-        <section
-            class="section contact-section"
-            id="contact"
-        >
+        <section class="section contact-section" id="contact">
 
             <div class="container">
 
-
                 <div class="contact-wrapper">
-
 
                     <div class="contact-content">
 
                         <span class="contact-label">
-                            Have a project in mind?
+                            Get In Touch
                         </span>
 
 
                         <h2>
-
-                            Let's create
-                            something
-                            <span>great.</span>
-
+                            Have an idea?
+                            <span>Let's build it.</span>
                         </h2>
 
 
                         <p>
-
-                            Whether you have an AI application,
-                            website idea, video project, or simply
-                            want to connect, I'd love to hear from you.
-
+                            Whether you need a website,
+                            application, AI integration or
+                            creative digital work, feel free
+                            to get in touch.
                         </p>
 
 
                         <a
-                            href="mailto:zohaibshar19@gmail.com"
+                            href="mailto:your-email@example.com"
                             class="email-link"
                         >
-
-                            zohaibshar19@gmail.com
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                            Let's Talk
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
                         </a>
 
                     </div>
 
 
-
                     <div class="contact-details">
-
 
                         <div class="contact-item">
 
                             <div class="contact-icon">
-
-                                <i class="fa-solid fa-envelope"></i>
-
+                                <i
+                                    class="fa-solid fa-envelope"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
 
                             <div>
 
-                                <span>
-                                    Email
-                                </span>
+                                <span>Email</span>
 
                                 <a href="mailto:zohaibshar19@gmail.com">
                                     zohaibshar19@gmail.com
@@ -1380,20 +1161,19 @@
                         <div class="contact-item">
 
                             <div class="contact-icon">
-
-                                <i class="fa-solid fa-phone"></i>
-
+                                <i
+                                    class="fa-solid fa-phone"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
 
                             <div>
 
-                                <span>
-                                    Phone
-                                </span>
+                                <span>Phone</span>
 
-                                <a href="tel:+923043765809">
-                                    +92 304 3765809
-                                </a>
+                                <p>
+                                    +92 3043765809
+                                </p>
 
                             </div>
 
@@ -1403,19 +1183,18 @@
                         <div class="contact-item">
 
                             <div class="contact-icon">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
+                                <i
+                                    class="fa-solid fa-location-dot"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
 
                             <div>
 
-                                <span>
-                                    Location
-                                </span>
+                                <span>Location</span>
 
                                 <p>
-                                    Khairpur Mir's, Sindh, Pakistan
+                                    Khairpur Mir's Sindh, Pakistan
                                 </p>
 
                             </div>
@@ -1431,9 +1210,10 @@
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"
                             >
-
-                                <i class="fa-brands fa-instagram"></i>
-
+                                <i
+                                    class="fa-brands fa-instagram"
+                                    aria-hidden="true"
+                                ></i>
                             </a>
 
 
@@ -1443,9 +1223,23 @@
                                 rel="noopener noreferrer"
                                 aria-label="GitHub"
                             >
+                                <i
+                                    class="fa-brands fa-github"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
 
-                                <i class="fa-brands fa-github"></i>
 
+                            <a
+                                href="https://www.fiverr.com/sellers/sharzohaib/edit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Fiverr"
+                            >
+                                <i
+                                    class="fa-solid fa-briefcase"
+                                    aria-hidden="true"
+                                ></i>
                             </a>
 
                         </div>
@@ -1462,28 +1256,24 @@
 
 
 
-    <!-- ======================================
+    <!-- =====================================================
          FOOTER
-    ======================================= -->
+    ====================================================== -->
 
     <footer class="footer">
 
         <div class="container footer-container">
 
-
             <div class="footer-brand">
 
-                <a
-                    href="#home"
-                    class="logo"
-                >
+                <a href="#home" class="logo">
 
                     <span class="logo-mark">
-                        Z
+                        ZN
                     </span>
 
                     <span class="logo-text">
-                        Zohaib<span>.</span>
+                        Zohaib <span>Nazir</span>
                     </span>
 
                 </a>
@@ -1498,22 +1288,19 @@
             <div class="footer-copy">
 
                 <p>
-                    © <span id="currentYear"></span>
+                    © <span id="currentYear">2026</span>
                     Zohaib Nazir. All rights reserved.
                 </p>
 
             </div>
 
 
-            <a
-                href="#home"
-                class="back-top"
-            >
-
+            <a href="#home" class="back-top">
                 Back to top
-
-                <i class="fa-solid fa-arrow-up"></i>
-
+                <i
+                    class="fa-solid fa-arrow-up"
+                    aria-hidden="true"
+                ></i>
             </a>
 
         </div>
@@ -1521,13 +1308,8 @@
     </footer>
 
 
-
-    <!-- ======================================
-         JAVASCRIPT
-    ======================================= -->
-
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 
 </body>
-
 </html>
